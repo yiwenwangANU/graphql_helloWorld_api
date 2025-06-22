@@ -6,9 +6,11 @@ const typeDefs = `#graphql
         username: String!
         age: Int!
         nationality: Nationality!
+        friends: [User]
     }
     type Query {
-        users: [User!]!
+        users: [User!]! 
+        user(id:ID!):User!
     }
     enum Nationality {
         USA,

@@ -1,5 +1,5 @@
 // dummyData.js
-const users = [
+export const users = [
   {
     id: "1",
     name: "John Doe",
@@ -51,4 +51,35 @@ const users = [
   },
 ];
 
-export default users;
+export const movieList = [
+  {
+    id: "1",
+    name: "Inception",
+    yearOfPublication: 2010,
+    isInTheaters: false,
+  },
+  {
+    id: "2",
+    name: "The Dark Knight",
+    yearOfPublication: 2008,
+    isInTheaters: false,
+  },
+  {
+    id: "3",
+    name: "Tenet",
+    yearOfPublication: 2020,
+    isInTheaters: true,
+  },
+  {
+    id: "4",
+    name: "The Matrix",
+    yearOfPublication: 1999,
+    isInTheaters: false,
+  },
+  {
+    id: 7,
+    name: "Dune",
+    yearOfPublication: 2021,
+    isInTheaters: true,
+  },
+];

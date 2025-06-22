@@ -15,11 +15,14 @@ const httpServer = http.createServer(app);
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
+  plugins: [ApolloServerPluginDrainHttpServer({ httpServer })], // for grace shutdown
 });
 await server.start();
 
-app.use(cors(), express.json(), expressMiddleware(server));
+app.use(cors()); // allow everyheader, every mothod from everywhere
+app.use(express.json()); // body-parser
+app.use(expressMiddleware(server)); //to use Apollo Server as middleware,
+// set up the GraphQL endpoint (typically /graphql) for handling GraphQL queries and mutations.
 
 await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
 console.log(`🚀 Server ready at http://localhost:4000`);

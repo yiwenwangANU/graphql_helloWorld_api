@@ -3,7 +3,7 @@ import users from "../dummyData.js";
 
 const resolvers = {
   Query: {
-    users: () => users,
+    users: () => users, // database access here
   },
 };
 

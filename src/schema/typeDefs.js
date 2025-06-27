@@ -40,12 +40,12 @@ const typeDefs = `#graphql
         deleteUser(input:DeleteUserInput): User!
     }
     enum Nationality {
-        USA,
-        Canada,
-        UK,
-        Australia,
-        New Zealand,
-        South Korea,
+        CANADA
+        BRAZIL
+        INDIA
+        GERMANY
+        CHILE
+        UKRAINE
     }
 `;
 

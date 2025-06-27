@@ -13,6 +13,15 @@ const resolvers = {
       return movieList.find((movie) => movie.name == args.name);
     },
   },
+  Mutation: {
+    createUser: (parent, args) => {
+      const user = args.input;
+      const lastId = users[users.length - 1].id;
+      user.id = lastId + 1;
+      users.push(user);
+      return user;
+    },
+  },
   User: {
     favoriteMovies: () =>
       movieList.filter(

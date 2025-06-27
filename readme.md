@@ -41,4 +41,22 @@ query GetFavoriteMoviesOfUser( $userId: ID!) {
 }
 ```
 
-mutation
+# Mutation
+
+### Create a new user
+
+```
+mutation CreateUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    name
+    age
+  }
+}
+variable
+{
+  "input": {
+    "name": "name",
+    "username": "username",
+    "age": 20}
+}
+```

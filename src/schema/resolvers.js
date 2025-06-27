@@ -21,6 +21,18 @@ const resolvers = {
       users.push(user);
       return user;
     },
+    updateUsername: (parent, args) => {
+      const { id, newUsername } = args.input;
+      const user = users.find((user) => user.id == id);
+      user.username = newUsername;
+      return user;
+    },
+    deleteUser: (parent, args) => {
+      const { id } = args.input;
+      const index = users.findIndex((user) => user.id == id);
+      const user = users.pop(index);
+      return user;
+    },
   },
   User: {
     favoriteMovies: () =>

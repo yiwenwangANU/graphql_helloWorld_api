@@ -27,8 +27,17 @@ const typeDefs = `#graphql
         age: Int!
         nationality: Nationality = USA
     }
+    input UpdateUsernameInput {
+        id: ID!
+        newUsername: String!
+    }
+    input DeleteUserInput {
+        id: ID!
+    }
     type Mutation {
         createUser(input:CreateUserInput!): User!
+        updateUsername(input:UpdateUsernameInput): User!
+        deleteUser(input:DeleteUserInput): User!
     }
     enum Nationality {
         USA,

@@ -60,3 +60,39 @@ variable
     "age": 20}
 }
 ```
+
+### Update username
+
+```
+mutation updateUsename($input: UpdateUsernameInput!){
+ updateUsername(input: $input) {
+  id
+  name
+  username
+ }
+}
+variable
+{
+  "input": {
+    "id": "7",
+    "newUsername": "newusername"}
+}
+```
+
+### Delete user by Id
+
+```
+mutation deleteUser($input:DeleteUserInput!){
+  deleteUser(input: $input){
+    id
+    name
+    username
+  }
+}
+variable
+{
+  "input": {
+    "id": "7",
+  }
+}
+```

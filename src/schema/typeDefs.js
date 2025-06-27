@@ -7,6 +7,7 @@ const typeDefs = `#graphql
         age: Int!
         nationality: Nationality!
         friends: [User]
+        favoriteMovies: [Movie]
     }
     type Movie{
         id: ID!

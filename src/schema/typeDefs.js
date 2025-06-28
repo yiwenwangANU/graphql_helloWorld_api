@@ -25,7 +25,7 @@ const typeDefs = `#graphql
         name: String!
         username: String!
         age: Int!
-        nationality: Nationality = USA
+        nationality: Nationality = BRAZIL
     }
     input UpdateUsernameInput {
         id: ID!
